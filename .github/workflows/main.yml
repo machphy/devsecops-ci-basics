@@ -5,15 +5,12 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  security:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Step 1 - Works
-        run: echo "This step is fine"
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Step 2 - FAILS
-        run: exit 1
-
-      - name: Step 3 - Never Runs
-        run: echo "You will never see this"
+      - name: Run Gitleaks (Secret Scan)
+        uses: gitleaks/gitleaks-action@v2
