@@ -16,5 +16,3 @@ Get-LocalUser | Select-Object Name, Enabled
 Write-Output "`n=== NETWORK INFORMATION ==="
 Get-NetIPAddress | Select-Object IPAddress, InterfaceAlias
 
-Write-Output "`n=== TOP CPU PROCESSES ==="
-Get-Process | Sort-Object CPU -Descending | Select-Object -First 10 Name, Id, CPU
