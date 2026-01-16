@@ -4,7 +4,7 @@
 # Purpose: Basic host reconnaissance
 # ================================
 
-Write-Output "=== SYSTEM INFORMATION ==="
+Write-Output "=== SYSTEM INFORMATIONS ==="
 Get-ComputerInfo | Select-Object OsName, OsVersion, CsName
 
 Write-Output "`n=== CURRENT USER ==="
@@ -13,6 +13,5 @@ whoami
 Write-Output "`n=== LOCAL USERS ==="
 Get-LocalUser | Select-Object Name, Enabled
 
-Write-Output "`n=== NETWORK INFORMATION ==="
-Get-NetIPAddress | Select-Object IPAddress, InterfaceAlias
 
+@nsdjf
