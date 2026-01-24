@@ -1,0 +1,21 @@
+====================================
+TOPIC 1: THREATS, VULNERABILITIES, RISKS
+====================================
+
+Threat:
+A threat is anything that can cause harm to a system.
+Examples: hackers, malware, insiders, misconfigurations.
+
+Vulnerability:
+A vulnerability is a weakness in a system.
+Examples: SQL injection bugs, unpatched servers, hardcoded secrets.
+
+Risk:
+Risk is the business impact when a threat exploits a vulnerability.
+
+Simple formula:
+Risk = Likelihood × Impact
+
+Golden line:
+A threat is a potential danger, a vulnerability is a weakness, and risk is the business impact when both combine.
+
