@@ -19,3 +19,124 @@ Risk = Likelihood × Impact
 Golden line:
 A threat is a potential danger, a vulnerability is a weakness, and risk is the business impact when both combine.
 
+
+====================================
+TOPIC 2: GOVERNANCE & REGULATION
+====================================
+
+Governance:
+Governance defines internal rules, policies, and accountability for security.
+
+Examples:
+- Password policy
+- Access control rules
+- Incident response process
+- Change management policy
+
+Regulation:
+Regulation defines legal requirements imposed by law or industry standards.
+
+Examples:
+- GDPR
+- HIPAA
+- PCI-DSS
+
+Difference:
+
+Governance:
+- Internal
+- Defined by the organization
+- Flexible
+
+Regulation:
+- External
+- Defined by law
+- Mandatory
+
+Golden line:
+Governance defines how security should be done; regulation defines what must be done legally.
+
+
+====================================
+TOPIC 3: THREAT MODELLING
+====================================
+
+Threat Modelling:
+Threat modelling is the process of identifying potential attack paths before development.
+
+Purpose:
+- Think like an attacker
+- Identify weak points early
+- Design preventive controls
+
+Basic Steps:
+1. Identify assets (data, APIs, servers)
+2. Identify entry points (login, APIs, file uploads)
+3. Identify threats (SQL injection, XSS, credential theft)
+4. Design controls (authentication, validation, logging)
+
+STRIDE Model:
+S - Spoofing
+T - Tampering
+R - Repudiation
+I - Information Disclosure
+D - Denial of Service
+E - Elevation of Privilege
+
+DevSecOps Mapping:
+Threat modelling before coding = shift-left security.
+
+Golden line:
+Threat modelling identifies potential attack paths before development.
+
+
+====================================
+TOPIC 4: RISK MANAGEMENT
+====================================
+
+Risk Management:
+Risk management is the process of deciding how to handle identified risks.
+
+Risk Options:
+- Mitigate: Fix the vulnerability
+- Accept: Risk is acceptable
+- Transfer: Use insurance or third parties
+- Avoid: Remove the risky feature
+
+Risk Formula:
+Risk = Likelihood × Impact
+
+Golden line:
+Risk management balances security with business needs.
+
+
+====================================
+TOPIC 5: VULNERABILITY MANAGEMENT
+====================================
+
+Vulnerability Management:
+Vulnerability management is the continuous process of finding, fixing, and tracking weaknesses.
+
+Lifecycle:
+
+1. Discover:
+- Vulnerability scanning
+- Bug bounty
+- Logs and monitoring
+
+2. Prioritize:
+- CVSS score
+- Exploitability
+- Asset value
+
+3. Remediate:
+- Patch systems
+- Fix configurations
+- Update code
+
+4. Verify:
+- Rescan systems
+- Validate fixes
+
+Golden rule:
+Not all vulnerabilities need immediate fixing.
