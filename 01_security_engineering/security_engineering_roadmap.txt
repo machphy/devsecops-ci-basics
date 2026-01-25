@@ -1,0 +1,195 @@
+====================================
+SECURITY ENGINEERING LEARNING PATH
+====================================
+
+INTRODUCTION
+
+Security Engineers are critical to every organization’s security. Being a Security Engineer means designing secure systems, networks, and software, understanding threats and risks that can affect the organization, and assisting in responding to incidents.
+
+This learning path provides a structured introduction to security engineering from multiple perspectives. Regardless of specialization (SOC, Red Team, Blue Team, DevSecOps, AppSec), understanding these elements enables proactive risk identification and mitigation and strengthens an organization’s security posture.
+
+This path includes:
+- Security engineering fundamentals and career foundations
+- Network, system, and software security architecture and hardening
+- Threats, risks, risk management, and threat modelling
+- Incident response and cyber crisis management
+- Application security and DevSecOps principles
+
+
+====================================
+SECTION 1: INTRODUCTION TO SECURITY ENGINEERING
+====================================
+
+Topics:
+- Security Engineer Intro
+- Security Principles
+- Introduction to Cryptography
+- Identity and Access Management
+
+Focus:
+Understanding the role of a security engineer, security fundamentals, cryptography basics, and identity management.
+
+Practical Mapping:
+- Secure CI/CD pipelines
+- Secret management
+- IAM policies
+- Cryptographic controls
+
+Status: In Progress
+
+
+====================================
+SECTION 2: THREATS AND RISKS
+====================================
+
+Topics:
+- Governance & Regulation
+- Threat Modelling
+- Risk Management
+- Vulnerability Management
+
+Focus:
+Understanding how threats, vulnerabilities, and risks affect organizations and how to model, prioritize, and manage them.
+
+Practical Mapping:
+- Threat modelling of APIs and login systems
+- Risk scoring using likelihood and impact
+- Vulnerability scanning and prioritization
+- Compliance mapping
+
+Status: In Progress
+
+
+====================================
+SECTION 3: NETWORK AND SYSTEM SECURITY
+====================================
+
+Topics:
+- Secure Network Architecture
+- Linux System Hardening
+- Microsoft Windows Hardening
+- Active Directory Hardening
+- Network Device Hardening
+- Network Security Protocols
+- Virtualization and Containers
+- Intro to Cloud Security
+- Auditing and Monitoring
+
+Focus:
+Designing and hardening infrastructure, operating systems, and network components.
+
+Practical Mapping:
+- Firewall rules and segmentation
+- OS hardening scripts
+- AD security audits
+- Network traffic inspection
+- Cloud IAM hardening
+
+Status: Not Started
+
+
+====================================
+SECTION 4: SOFTWARE SECURITY
+====================================
+
+Topics:
+- OWASP API Security Top 10 (Part 1)
+- OWASP API Security Top 10 (Part 2)
+- SSDLC
+- SAST
+- DAST
+- Weaponizing Vulnerabilities
+- Introduction to DevSecOps
+
+Focus:
+Understanding application security risks, secure development, and DevSecOps practices.
+
+Practical Mapping:
+- API abuse testing
+- SAST and DAST integration
+- CI/CD security gates
+- Secure coding reviews
+- Threat modelling for apps
+
+Status: Not Started
+
+
+====================================
+SECTION 5: MANAGING INCIDENTS
+====================================
+
+Topics:
+- Intro to Incident Response and Incident Management
+- Logging for Accountability
+- Becoming a First Responder
+- Cyber Crisis Management
+
+Focus:
+Responding to security incidents and managing cyber crises effectively.
+
+Practical Mapping:
+- SIEM alert triage
+- Log normalization
+- Incident response playbooks
+- Forensics basics
+
+Status: Not Started
+
+
+====================================
+SECTION 6: OWASP TOP 10 (2025)
+====================================
+
+Topics:
+- IAAA Failures
+- Application Design Flaws
+- Insecure Data Handling
+
+Focus:
+Understanding the most critical web application security risks.
+
+Practical Mapping:
+- Exploitation labs
+- Secure coding fixes
+- Detection rules
+- CI/CD blocking
+
+Status: Not Started
+
+
+====================================
+OVERALL STATUS TRACKING
+====================================
+
+Section 1: In Progress  
+Section 2: In Progress  
+Section 3: Not Started  
+Section 4: Not Started  
+Section 5: Not Started  
+Section 6: Not Started  
+
+
+====================================
+DEVSECOPS INTEGRATION
+====================================
+
+- Embed security controls into CI/CD pipelines
+- Automate vulnerability scanning and secret detection
+- Apply shift-left and shift-everywhere principles
+- Convert Red Team findings into preventive controls
+- Normalize logs for detection engineering
+
+
+====================================
+CAREER ALIGNMENT
+====================================
+
+This learning path aligns with roles such as:
+- SOC Analyst
+- Security Engineer
+- DevSecOps Engineer
+- Detection Engineer
+- Application Security Engineer
+- Red Team Operator
+
+Progress is documented and mapped to practical labs and GitHub repositories.
