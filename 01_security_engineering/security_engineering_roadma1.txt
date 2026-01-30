@@ -1,0 +1,31 @@
+====================================
+PROGRESS UPDATE
+====================================
+
+Date: 2026-01-10
+
+Completed Topics:
+- Threats, Vulnerabilities, and Risks
+- Governance & Regulation
+- Threat Modelling
+- Risk Management
+- Vulnerability Management
+- Secure Network Architecture
+
+Key Learnings:
+- Understood the difference between threats, vulnerabilities, and risks
+- Learned how governance and regulation influence security decisions
+- Studied threat modelling using STRIDE
+- Learned how risk is calculated and managed
+- Understood vulnerability management lifecycle
+- Learned principles of secure network architecture and segmentation
+
+Current Focus:
+- Section 3: Network & System Security
+
+Next Planned Topics:
+- Linux System Hardening
+- Windows System Hardening
+- Active Directory Hardening
+ueafhsdidfsjf
+asdkfb
