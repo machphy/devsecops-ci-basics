@@ -1,0 +1,2 @@
+Security engineering = risk ko samajhna, reduce karna, aur manage karna
+Code → Security → Build → Security → Deploy → Security
