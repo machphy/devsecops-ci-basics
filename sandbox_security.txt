@@ -1,0 +1,13 @@
+# Sandbox Security (Text)
+
+A sandbox is an isolated environment where code can run without affecting the host system. It is used to safely execute, test, or analyze untrusted or potentially harmful code.
+
+**Key Points:**
+- Restricts file, network, and system access.
+- Used in CI/CD, browsers, malware analysis, and cloud.
+- Tools: Docker, Firejail, VMs, containers.
+- Always sandbox untrusted or third-party code.
+- Limit permissions: no network, read-only filesystem, resource limits.
+
+**Example:**
+- Running a script in Docker or Firejail to prevent it from accessing your files or network.
