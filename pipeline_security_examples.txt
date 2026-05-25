@@ -1,0 +1,91 @@
+# Pipeline Security Example
+
+This file demonstrates basic pipeline security practices using Python, shell, and text explanations.
+
+## 1. Secure Secrets Handling
+
+### Python Example
+```
+import os
+
+def get_secret(secret_name):
+    return os.environ.get(secret_name)
+
+db_password = get_secret("DB_PASSWORD")
+if db_password:
+    print("Secret loaded securely.")
+else:
+    print("Secret not found!")
+```
+
+### Shell Example
+```
+if [ -z "$API_KEY" ]; then
+  echo "API_KEY not set!"
+  exit 1
+fi
+echo "API_KEY is set and secure."
+```
+
+### Text
+- Never hardcode secrets in code.
+- Use environment variables or secret managers.
+
+## 2. Code Scanning in Pipeline
+
+### Python Example
+```
+import subprocess
+
+def run_bandit():
+    result = subprocess.run(["bandit", "-r", "."], capture_output=True, text=True)
+    print(result.stdout)
+
+run_bandit()
+```
+
+### Shell Example
+```
+bandit -r .
+```
+
+### Text
+- Use tools like Bandit (Python) or ShellCheck (shell scripts) to scan for vulnerabilities before deployment.
+
+## 3. Dependency Checking
+
+### Python Example
+```
+import subprocess
+
+def check_vulnerabilities():
+    subprocess.run(["pip", "install", "safety"])
+    subprocess.run(["safety", "check"])
+
+check_vulnerabilities()
+```
+
+### Shell Example
+```
+pip install safety
+safety check
+```
+
+### Text
+- Regularly scan dependencies for known vulnerabilities.
+
+## 4. Least Privilege Principle
+
+### Text
+- Only give your pipeline the permissions it needs (e.g., read-only access to code, not write).
+
+## 5. Example Secure Pipeline Steps
+
+```
+1. Pull code from version control.
+2. Run static code analysis (Bandit, ShellCheck).
+3. Check dependencies for vulnerabilities.
+4. Run tests.
+5. Deploy only if all checks pass.
+6. Use environment variables for secrets.
+```
