@@ -1,0 +1,109 @@
+====================================
+CONTAINER SECURITY BASICS
+====================================
+
+Container Security:
+Container security is the practice of securing containerized applications across their lifecycle, including image, runtime, and host levels.
+
+------------------------------------
+1. IMAGE SECURITY (BUILD TIME)
+------------------------------------
+
+Description:
+Security risks start at the image build stage.
+
+Risks:
+- Vulnerable base images
+- Malicious or outdated packages
+- Hardcoded secrets inside image
+
+Controls:
+- Use minimal base images (Alpine, distroless)
+- Perform image scanning (Trivy, Grype)
+- Avoid storing secrets in images
+
+DevSecOps Mapping:
+- CI/CD pipelines should scan images
+- Build should fail if vulnerabilities are detected
+
+
+------------------------------------
+2. CONTAINER RUNTIME SECURITY
+------------------------------------
+
+Description:
+Security concerns when the container is running.
+
+Risks:
+- Privilege escalation
+- Container escape to host
+- Malicious processes inside container
+
+Controls:
+- Run containers as non-root users
+- Use read-only file systems
+- Drop unnecessary Linux capabilities
+- Monitor runtime activity (Falco)
+
+Example:
+docker run --read-only --user 1000 myapp
+
+
+------------------------------------
+3. HOST SECURITY
+------------------------------------
+
+Description:
+All containers depend on the host OS and kernel.
+
+Risks:
+- Kernel vulnerabilities affecting all containers
+- Weak OS hardening
+
+Controls:
+- Regular patching and updates
+- OS hardening
+- Restrict container access to host resources
+
+
+------------------------------------
+4. KUBERNETES SECURITY (ADVANCED)
+------------------------------------
+
+If using Kubernetes:
+
+Key Controls:
+- RBAC (Role-Based Access Control)
+- Network Policies
+- Pod Security Policies
+- Secure Secrets Management
+
+
+------------------------------------
+5. REAL-WORLD ATTACK FLOW
+------------------------------------
+
+1. Developer uses vulnerable image
+2. Attacker exploits vulnerability
+3. Gains shell access inside container
+4. Escapes to host system
+5. Full infrastructure compromise
+
+
+------------------------------------
+6. DEVSECOPS MAPPING
+------------------------------------
+
+Stage        Security Control
+------------------------------------
+Build        Image scanning
+CI/CD        Policy enforcement
+Deploy       Secure configurations
+Runtime      Monitoring and detection
+
+
+------------------------------------
+INTERVIEW ONE-LINER
+------------------------------------
+
+Container security involves securing the image, runtime, and host to prevent vulnerabilities, privilege escalation, and container escape.
