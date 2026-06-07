@@ -1,0 +1,133 @@
+====================================
+AWS IAM BASICS
+====================================
+
+IAM:
+IAM (Identity and Access Management) is the foundation of AWS security. It controls who can access AWS resources and what actions they can perform.
+
+------------------------------------
+1. IAM USERS
+------------------------------------
+
+IAM users represent individual identities in AWS.
+
+Examples:
+- Admin user
+- Developer user
+- SOC analyst user
+
+Best Practice:
+- Avoid using the root account
+- Enable MFA for all users
+
+
+------------------------------------
+2. IAM GROUPS
+------------------------------------
+
+Groups allow multiple users to share the same permissions.
+
+Examples:
+- Developers
+- Security-Team
+- DevOps-Team
+
+Benefits:
+- Easier permission management
+- Centralized access control
+
+
+------------------------------------
+3. IAM POLICIES
+------------------------------------
+
+Policies define permissions using JSON documents.
+
+Example Permissions:
+- S3 read access
+- EC2 full access
+- CloudWatch monitoring
+
+Policy Principle:
+- Follow least privilege access
+
+
+------------------------------------
+4. IAM ROLES
+------------------------------------
+
+Roles provide temporary permissions to AWS services and applications.
+
+Common Role Usage:
+- EC2 instance roles
+- Lambda execution roles
+- CI/CD pipeline roles
+- EKS/ECS task roles
+
+Important:
+Modern AWS environments prefer IAM roles over long-term access keys.
+
+
+------------------------------------
+5. LEAST PRIVILEGE
+------------------------------------
+
+Least privilege means giving only the minimum permissions required.
+
+Example:
+- An application needing S3 read access should not receive administrator permissions.
+
+Security Importance:
+- Reduces blast radius
+- Limits attacker movement
+- Prevents privilege abuse
+
+
+------------------------------------
+6. COMMON IAM RISKS
+------------------------------------
+
+- Over-permissioned users
+- Unused access keys
+- Lack of MFA
+- Shared accounts
+- AdministratorAccess everywhere
+
+Real-World Impact:
+IAM misconfigurations are one of the biggest causes of AWS breaches.
+
+
+------------------------------------
+7. DEVSECOPS MAPPING
+------------------------------------
+
+CI/CD:
+- Pipelines use IAM roles
+
+EC2:
+- Instances should use instance roles instead of hardcoded keys
+
+Containers:
+- ECS/EKS workloads use task roles
+
+Monitoring:
+- IAM activity should be logged using CloudTrail
+
+
+------------------------------------
+8. SECURITY BEST PRACTICES
+------------------------------------
+
+- Enable MFA
+- Rotate credentials
+- Use IAM roles
+- Avoid root account usage
+- Monitor IAM activity
+- Apply least privilege
+
+
+------------------------------------
+INTERVIEW ONE-LINER
+------------------------------------
+
+IAM is the foundation of AWS security because permissions define the blast radius of compromise.
