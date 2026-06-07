@@ -1,0 +1,173 @@
+====================================
+AWS VPC BASICS
+====================================
+
+VPC:
+VPC (Virtual Private Cloud) is an isolated virtual network inside AWS where resources such as EC2 instances are deployed.
+
+Purpose:
+- Network isolation
+- Traffic control
+- Secure cloud architecture
+
+------------------------------------
+1. CIDR BLOCK
+------------------------------------
+
+A CIDR block defines the IP address range of the VPC.
+
+Example:
+10.0.0.0/16
+
+Meaning:
+- Private IP address range
+- Used internally inside AWS network
+
+
+------------------------------------
+2. SUBNETS
+------------------------------------
+
+Subnets divide a VPC into smaller network segments.
+
+Types:
+- Public Subnet
+- Private Subnet
+
+Public Subnet:
+- Connected to internet
+- Used for web servers, load balancers
+
+Private Subnet:
+- No direct internet access
+- Used for databases and internal services
+
+
+------------------------------------
+3. INTERNET GATEWAY
+------------------------------------
+
+An Internet Gateway allows communication between the VPC and the internet.
+
+Usage:
+- Public-facing applications
+- Web access
+
+Security Note:
+Do not expose unnecessary services directly to the internet.
+
+
+------------------------------------
+4. ROUTE TABLES
+------------------------------------
+
+Route tables define how traffic moves inside the VPC.
+
+Examples:
+- Internal traffic routing
+- Internet traffic routing
+
+Security Importance:
+Improper routing may expose private resources.
+
+
+------------------------------------
+5. SECURITY GROUPS
+------------------------------------
+
+Security Groups act as virtual firewalls for EC2 instances.
+
+Rules:
+- Inbound rules
+- Outbound rules
+
+Best Practices:
+- Allow only required ports
+- Restrict source IP addresses
+
+Example:
+Allow SSH only from trusted IPs.
+
+
+------------------------------------
+6. NETWORK ACLs
+------------------------------------
+
+Network ACLs filter traffic at subnet level.
+
+Difference from Security Groups:
+- Security Groups are stateful
+- NACLs are stateless
+
+Usage:
+- Additional network-level protection
+
+
+------------------------------------
+7. PUBLIC VS PRIVATE ARCHITECTURE
+------------------------------------
+
+Secure Design Example:
+
+Internet
+   ↓
+Load Balancer (Public Subnet)
+   ↓
+Application Servers (Private Subnet)
+   ↓
+Database Servers (Private Subnet)
+
+Purpose:
+- Reduce exposure
+- Limit attack surface
+- Prevent direct database access
+
+
+------------------------------------
+8. COMMON VPC RISKS
+------------------------------------
+
+- Open Security Groups
+- Public databases
+- Flat network architecture
+- Poor segmentation
+- Exposed management ports
+
+Real-World Impact:
+Misconfigured VPCs often lead to cloud breaches.
+
+
+------------------------------------
+9. DEVSECOPS MAPPING
+------------------------------------
+
+Infrastructure as Code:
+- Terraform
+- CloudFormation
+
+Security Automation:
+- Security Group auditing
+- Misconfiguration detection
+
+Monitoring:
+- VPC Flow Logs
+- CloudWatch
+
+
+------------------------------------
+10. SECURITY BEST PRACTICES
+------------------------------------
+
+- Use private subnets for internal systems
+- Restrict SSH/RDP access
+- Enable VPC Flow Logs
+- Apply least privilege networking
+- Segment workloads
+- Avoid public databases
+
+
+------------------------------------
+INTERVIEW ONE-LINER
+------------------------------------
+
+A VPC provides isolated networking in AWS and enables secure segmentation, routing, and traffic control for cloud workloads.
