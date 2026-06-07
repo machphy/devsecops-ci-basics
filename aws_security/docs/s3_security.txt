@@ -1,0 +1,180 @@
+====================================
+AWS S3 SECURITY
+====================================
+
+S3:
+Amazon S3 (Simple Storage Service) is AWS object storage used to store files, backups, logs, media, and application data.
+
+Purpose:
+- Store files and objects
+- Static website hosting
+- Backups and logs
+- Application storage
+
+------------------------------------
+1. S3 BUCKETS
+------------------------------------
+
+Buckets are containers used to store objects/files in S3.
+
+Examples:
+- application-data
+- logs-storage
+- backups
+
+Security Importance:
+Improper bucket permissions can expose sensitive data publicly.
+
+
+------------------------------------
+2. OBJECTS
+------------------------------------
+
+Objects are files stored inside buckets.
+
+Examples:
+- Images
+- PDFs
+- Logs
+- Backups
+
+Each object contains:
+- Data
+- Metadata
+- Permissions
+
+
+------------------------------------
+3. ACCESS CONTROL
+------------------------------------
+
+S3 access can be controlled using:
+
+- IAM Policies
+- Bucket Policies
+- ACLs (Access Control Lists)
+
+Best Practice:
+Use IAM and Bucket Policies instead of ACLs whenever possible.
+
+
+------------------------------------
+4. PUBLIC ACCESS
+------------------------------------
+
+S3 buckets may accidentally become public.
+
+Risks:
+- Sensitive data exposure
+- Credential leaks
+- Source code disclosure
+- Backup exposure
+
+Real-World Impact:
+Public S3 buckets are one of the most common cloud security incidents.
+
+
+------------------------------------
+5. BLOCK PUBLIC ACCESS
+------------------------------------
+
+AWS provides Block Public Access settings to prevent accidental exposure.
+
+Best Practice:
+Enable Block Public Access on all buckets unless public access is explicitly required.
+
+
+------------------------------------
+6. ENCRYPTION
+------------------------------------
+
+S3 supports encryption for stored data.
+
+Types:
+- SSE-S3
+- SSE-KMS
+- Client-side encryption
+
+Security Importance:
+Encryption protects data at rest.
+
+
+------------------------------------
+7. VERSIONING
+------------------------------------
+
+Versioning stores multiple versions of objects.
+
+Benefits:
+- Recovery from accidental deletion
+- Ransomware resilience
+- Audit support
+
+
+------------------------------------
+8. LOGGING AND MONITORING
+------------------------------------
+
+Important Monitoring Services:
+- CloudTrail
+- S3 Access Logs
+- CloudWatch
+
+Monitoring Goals:
+- Detect suspicious access
+- Track bucket activity
+- Monitor unauthorized downloads
+
+
+------------------------------------
+9. COMMON S3 SECURITY RISKS
+------------------------------------
+
+- Public buckets
+- Weak bucket policies
+- Unencrypted sensitive data
+- Exposed backups
+- Hardcoded AWS credentials inside files
+- Excessive permissions
+
+Real-World Impact:
+Misconfigured S3 buckets have caused major data breaches.
+
+
+------------------------------------
+10. DEVSECOPS MAPPING
+------------------------------------
+
+CI/CD Usage:
+- Artifact storage
+- Log storage
+- Static site hosting
+
+Security Automation:
+- Continuous bucket auditing
+- Misconfiguration scanning
+- Policy enforcement
+
+Infrastructure as Code:
+- Terraform
+- CloudFormation
+
+
+------------------------------------
+11. SECURITY BEST PRACTICES
+------------------------------------
+
+- Enable Block Public Access
+- Apply least privilege
+- Enable encryption
+- Enable versioning
+- Monitor access logs
+- Avoid storing secrets in buckets
+- Restrict bucket policies
+
+
+------------------------------------
+INTERVIEW ONE-LINER
+------------------------------------
+
+S3 security focuses on preventing unauthorized access, enforcing encryption, and monitoring bucket activity to protect sensitive cloud data.
