@@ -178,3 +178,9 @@ INTERVIEW ONE-LINER
 ------------------------------------
 
 S3 security focuses on preventing unauthorized access, enforcing encryption, and monitoring bucket activity to protect sensitive cloud data.
+
+------------------------------------
+12. NRXT
+------------------------------------
+
+nrxt
