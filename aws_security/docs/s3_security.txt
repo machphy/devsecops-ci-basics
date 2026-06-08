@@ -184,3 +184,9 @@ S3 security focuses on preventing unauthorized access, enforcing encryption, and
 ------------------------------------
 
 nrxt
+
+------------------------------------
+13. NEXT
+------------------------------------
+
+next
