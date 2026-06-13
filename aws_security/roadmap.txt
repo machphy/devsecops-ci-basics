@@ -1,0 +1,46 @@
+====================================
+AWS SECURITY LEARNING PATH
+====================================
+
+INTRODUCTION
+
+This roadmap covers core AWS security concepts, controls, and practical cloud hardening practices.
+
+Section 1: IAM & Identity Security
+- IAM fundamentals and secure identity design
+- Policies, roles, groups, and least-privilege access
+- AWS credentials, MFA, and federated access
+- IAM best practices and role separation
+
+Section 2: Compute & Network Security
+- EC2 instance security and IAM roles
+- VPC design, subnets, security groups, and NACLs
+- Network segmentation, bastion hosts, and private connectivity
+- Secure configuration for AWS-managed services
+
+Section 3: Storage & Data Protection
+- S3 bucket security, bucket policies, and ACLs
+- Encryption at rest and in transit (SSE, KMS)
+- Data classification, backup, and recovery
+- Preventing data exposure and public access
+
+Section 4: Monitoring, Logging & Governance
+- CloudTrail, CloudWatch, and GuardDuty basics
+- AWS Config and Config Rules for compliance
+- Centralized logging, alerting, and audit trails
+- Incident detection and response in AWS
+
+Section 5: DevSecOps & Cloud Automation
+- Secure IaC with CloudFormation/Terraform
+- Secrets management and parameter store
+- CI/CD pipeline security on AWS
+- Container and serverless security patterns
+
+OVERALL STATUS TRACKING
+- Section 1: Not Started
+- Section 2: Not Started
+- Section 3: Not Started
+- Section 4: Not Started
+- Section 5: Not Started
+
+====================================
