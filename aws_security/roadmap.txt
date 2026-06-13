@@ -34,6 +34,7 @@ Section 5: DevSecOps & Cloud Automation
 - Secure IaC with CloudFormation/Terraform
 - Secrets management and parameter store
 - CI/CD pipeline security on AWS
+- Python package management and `pip` security for AWS workloads
 - Container and serverless security patterns
 
 OVERALL STATUS TRACKING
