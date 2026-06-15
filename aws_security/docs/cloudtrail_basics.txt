@@ -1,0 +1,105 @@
+====================================
+AWS CLOUDTRAIL BASICS
+====================================
+
+CloudTrail:
+CloudTrail records AWS account activity and API calls for auditing, security analysis, and compliance.
+
+Purpose:
+- Track who did what, where, and when across AWS services
+- Detect unauthorized actions and misconfigurations
+- Retain audit logs for investigations and compliance
+
+------------------------------------
+1. CLOUDTRAIL TRAILS
+------------------------------------
+
+A trail collects and delivers CloudTrail events to an S3 bucket and optionally CloudWatch Logs.
+
+Key points:
+- Trails can be applied to all AWS Regions for global coverage
+- A single account can use one or more trails
+- Enable multi-region trails for centralized logging
+
+Best practice:
+- Send events to an encrypted, write-only S3 bucket
+- Use bucket policies to restrict access to log storage
+
+------------------------------------
+2. EVENT TYPES
+------------------------------------
+
+CloudTrail records two primary event categories:
+- Management events: control plane actions such as IAM, EC2, and S3 configuration changes
+- Data events: data plane actions such as S3 object access and Lambda invocation
+
+Important:
+- Management events are enabled by default for read/write activity
+- Data events must be explicitly configured and can generate more log volume
+
+------------------------------------
+3. INTEGRATION WITH CLOUDWATCH
+------------------------------------
+
+CloudTrail can send logs to CloudWatch Logs for real-time monitoring and alerting.
+
+Common uses:
+- Alert on suspicious API calls
+- Detect changes to security groups, IAM policies, or root login activity
+- Build dashboards for AWS account activity
+
+Security benefit:
+- Faster detection of anomalous or unauthorized actions
+
+------------------------------------
+4. GUARDRAILS AND RESPONSE
+------------------------------------
+
+Use CloudTrail with AWS Config, GuardDuty, and Security Hub.
+
+Example workflow:
+- CloudTrail logs suspicious API activity
+- GuardDuty analyzes it for threats
+- Security Hub centralizes findings
+- AWS Config checks compliance with security rules
+
+Best practice:
+- Enable CloudTrail across all accounts and regions
+- Keep logs immutable and retained for at least 90 days or longer for compliance
+
+------------------------------------
+5. COMMON CLOUDTRAIL RISKS
+------------------------------------
+
+- Not enabling multi-region trails
+- Storing logs in unencrypted or publicly accessible S3 buckets
+- Failing to monitor CloudTrail delivery errors
+- Not alerting on changes to trail configuration or log storage
+
+Real-world impact:
+CloudTrail gaps can hide attacker activity and delay incident response.
+
+------------------------------------
+6. DEVSECOPS MAPPING
+------------------------------------
+
+CI/CD:
+- Pipeline deployments should verify CloudTrail logging is enabled
+- Infrastructure as code can enforce trail configuration
+
+Audit:
+- Use CloudTrail logs to validate changes and detect drift
+
+Incident Response:
+- CloudTrail provides a historical record for investigations
+- Combine with CloudWatch and GuardDuty for fast response
+
+------------------------------------
+7. SECURITY BEST PRACTICES
+------------------------------------
+
+- Enable CloudTrail in every AWS account and all regions
+- Send logs to encrypted S3 and CloudWatch Logs
+- Restrict access to log storage and log delivery settings
+- Monitor CloudTrail configuration changes and delivery failures
+- Retain logs according to policy and compliance requirements
