@@ -1,10 +1,3 @@
-"""AWS CloudTrail setup helper script.
-
-This script demonstrates how to create a CloudTrail trail, configure
-an S3 bucket for log delivery, and optionally enable CloudWatch Logs
-integration using boto3.
-"""
-
 import argparse
 import json
 import logging
