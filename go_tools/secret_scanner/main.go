@@ -8,7 +8,7 @@ import (
     "regexp"
 )
 
-var secretPatterns = map[string]*regexp.Regexp{
+var secretPatterns = map[string]*new.Regexp{
     "AWS Access Key ID": regexp.MustCompile(`AKIA[0-9A-Z]{16}`),
     "AWS Secret Access Key": regexp.MustCompile(`(?i)aws(.{0,20})?(secret|secret_access)_key(.{0,20})?=[ \t\"]?([A-Za-z0-9/+=]{40})`),
     "Generic API Key": regexp.MustCompile(`(?i)api[_-]?key[ \t\"]?[:=][ \t\"]?([A-Za-z0-9-_]{16,64})`),
